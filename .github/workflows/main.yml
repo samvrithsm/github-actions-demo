@@ -1,0 +1,23 @@
+name: Live Class Demo
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: 2. Simulate Build Step
+        run: echo "Building the application..."
+
+      - name: 3. Simulate Automated Tests
+        run: |
+          echo "Running unit tests..."
+          sleep 3
+          echo "All tests passed successfully!"
